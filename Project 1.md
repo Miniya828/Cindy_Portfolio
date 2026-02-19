@@ -1,8 +1,4 @@
-# Cindy_Portfolio
-Tennis Data Analysis Insights 
-
-# Project 1
-## Is Height associated with First Serve speed in the Top 100 WTA players?
+# Is Height associated with First Serve speed in the Top 100 WTA players?
 Serve is considered to be the most important skill in Tennis. In ATP, serves have been a huge component, with people with better serve ability tending to have a greater chance of winning. However, first-serve ability varies a lot between players in the WTA, and sometimes it is not consistent that the taller player has a more powerful serve, while the fastest servers tend to be taller. In this project, I attempt to investigate whether players’ height is statistically associated with first serve speed in the WTA top 100 players.  
 
 - We scraped player information from the official WTA website, including ranking, age, and height. We supplemented these data with Tennis Abstract, which provided the number of aces, average first-serve speed, and preferred playing hand.
@@ -22,7 +18,7 @@ Serve is considered to be the most important skill in Tennis. In ATP, serves hav
 | Left-handed | 9 (9.2%) |
 | Right-handed | 89 (90.8%) |
 
-**Result**
+## Result
 | Predictor | Estimate | 95% CI (Lower) | 95% CI (Upper) | p-value |
 |---|---:|---:|---:|---:|
 | Height | 0.55 | 0.40 | 0.70 | 2.41E-10 |
