@@ -19,7 +19,7 @@ Serve is considered to be the most important skill in Tennis. In ATP, serves hav
 | Left-handed | 9 (9.2%) |
 | Right-handed | 89 (90.8%) |
 
-## Result
+**Result**
 
 | Predictor | Estimate | 95% CI (Lower) | 95% CI (Upper) | p-value |
 |---|---:|---:|---:|---:|
