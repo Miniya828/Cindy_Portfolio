@@ -29,5 +29,6 @@ Serve is considered to be the most important skill in Tennis. In ATP, serves hav
 
 - Height shows a clear positive association with first serve speed. It means that holding age, ranking, and dominated hands constant, for every 1 cm taller, a player is expected to have 0.55 mph higher average first-serve speed. On a more practical scale, 10 cm taller is about 5.5 mph faster on average.
 - We also found that Ranking has nothing to do with first serve speed, for people have the same height, age, handness, and number of matches played. 
-- Further analysis needed for ATP as well. 
+- Further analysis needed for ATP as well.
+
 ![](https://github.com/Miniya828/Cindy_Portfolio/blob/main/Images/height_firstserve.png)
