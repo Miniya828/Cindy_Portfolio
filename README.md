@@ -7,7 +7,7 @@ Serve is considered to be the most important skill in Tennis. In ATP, serves hav
 
 - We scraped player information from the official WTA website, including ranking, age, and height. We supplemented these data with Tennis Abstract, which provided the number of aces, average first-serve speed, and preferred playing hand.
 - The dataset includes the WTA Top 100 players as of February 16, with a mean age of 26.34 years (SD = 4.18). Match counts and ace totals reflect performance over the prior 52 weeks. 
-
+**Data**
 | Variable | N | Mean | SD |
 |---|---:|---:|---:|
 | Total number of players | 100 |  |  |
@@ -16,9 +16,6 @@ Serve is considered to be the most important skill in Tennis. In ATP, serves hav
 | Number of Aces in Last 52 weeks | 100 | 112.43 | 89.31 |
 | Height (cm) | 99 | 174.05 | 5.54 |
 | Average First Serve Speed (mph) | 86 | 97.81 | 5.35 |
-
-**Handedness**
-
 | Hand | n (%) |
 |---|---:|
 | Left-handed | 9 (9.2%) |
