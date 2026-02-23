@@ -7,6 +7,9 @@ This project compares anthropometric profiles between WNBA players and WTA Top 1
 ## 1. Do WNBA and WTA athletes differ in BMI?
 BMI values were available for 66 WTA players and 132 WNBA players. WNBA players had a higher mean BMI (mean = 23.04) than WTA Top 100 players (mean = 20.27). A Welch two-sample t-test indicated a statistically significant difference in means (t = 6.64, df = 93.78, p = 2×10⁻⁹), with a 95% confidence interval for the mean difference (WNBA − WTA) of [1.94, 3.59] BMI units. A Wilcoxon rank-sum test provided consistent evidence that the BMI distributions differ between groups (p = 3.39×10⁻¹⁵). These results support a clear difference in body-size profiles across sports, while noting that BMI is descriptive and does not directly measure body composition or fitness.
 
+https://raw.githubusercontent.com/Miniya828/Cindy_Portfolio/refs/heads/cindy_tennis/Images/BMI%20comprison.png
+
+
 
 ##2. Do they differ in height–weight profiles jointly?
 
