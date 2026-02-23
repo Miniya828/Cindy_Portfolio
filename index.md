@@ -1,4 +1,4 @@
 # Cindy Portfolio
 
-- [Project 1](./Project1)
-- [Project 2](./Project2)
+- [Project 1](./Project1.md)
+- [Project 2](./Project2.md)
