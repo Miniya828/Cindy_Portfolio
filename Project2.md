@@ -20,6 +20,7 @@ To compare weights at the same height without extrapolating beyond where the two
 
 ## 3. What is the expected weight for one to become a WTA Top 100 / WNBA player?
 Using the overlap-trained interaction model, I created a simple prediction function to estimate an expected weight given a player’s height and sport, along with a 95% prediction interval (a plausible range for an individual athlete). For example, at 180 cm, the model predicts an expected weight of 167.8 lb for WNBA players (95% PI = 141.0, 194.6) and 147.4 lb for WTA players (95% PI = 120.7, 174.1). These predicted values are descriptive reference estimates derived from the observed data; they could be interpreted as typical weights for the condition. 
+
 | Sport | Height (cm) | Expected Weight (lb) | Lower (PI) | Upper (PI) |
 |------|-------------:|---------------------:|-----------:|-----------:|
 | WNBA | 170 | 141.09 | 114.11 | 168.08 |
