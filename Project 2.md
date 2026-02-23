@@ -1,1 +1,2 @@
 ### WTA Top 100 vs WNBA: How Different Are Athlete Body-Size Profiles
+# Using publicly available height and weight data, I compared body-size profiles between WTA Top 100 tennis players and WNBA players. Across multiple analyses, WNBA athletes are taller, heavier, and have higher BMI on average than WTA Top-100 athletes. Even within a shared height range (167.6–185.0 cm), WTA players weigh about ~17 lb less than WNBA players of the same height.
