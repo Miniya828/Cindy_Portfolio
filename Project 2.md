@@ -16,17 +16,16 @@ To compare weights at the same height without extrapolating beyond where the two
 
 ## 3. What is the expected weight for one to become a WTA Top 100 / WNBA player?
 Using the overlap-trained interaction model, I created a simple prediction function to estimate an expected weight given a player’s height and sport, along with a 95% prediction interval (a plausible range for an individual athlete). For example, at 180 cm, the model predicts an expected weight of 167.8 lb for WNBA players (95% PI = 141.0, 194.6) and 147.4 lb for WTA players (95% PI = 120.7, 174.1). These predicted values are descriptive reference estimates derived from the observed data; they could be interpreted as typical weights for the condition. 
-
-| Sport | Height (cm) | Expected Weight (lb) | Lower (PI) | Upper (PI) | 
+| Sport | Height (cm) | Expected Weight (lb) | Lower (PI) | Upper (PI) |
 |------|-------------:|---------------------:|-----------:|-----------:|
-| WNBA | 170 | 141.0910 | 114.1056 | 168.0764 | 
-| WNBA | 175 | 154.4397 | 127.9139 | 180.9655 |
-| WNBA | 180 | 167.7884 | 140.9553 | 194.6216 |
-| WNBA | 185 | 181.1372 | 153.2551 | 209.0192 | 
-| WTA  | 170 | 128.8897 | 101.9791 | 155.8003 | 
-| WTA  | 175 | 138.1395 | 111.6247 | 164.6543 |
-| WTA  | 180 | 147.3893 | 120.6926 | 174.0860 | 
-| WTA  | 185 | 156.6391 | 129.1942 | 184.0841 | 
+| WNBA | 170 | 141.09 | 114.11 | 168.08 |
+| WNBA | 175 | 154.44 | 127.91 | 180.97 |
+| WNBA | 180 | 167.79 | 140.96 | 194.62 |
+| WNBA | 185 | 181.14 | 153.26 | 209.02 |
+| WTA  | 170 | 128.89 | 101.98 | 155.80 |
+| WTA  | 175 | 138.14 | 111.62 | 164.65 |
+| WTA  | 180 | 147.39 | 120.69 | 174.09 |
+| WTA  | 185 | 156.64 | 129.19 | 184.08 |
 
 ## Summary
 Across multiple methods—BMI comparisons, multivariate height–weight testing, and height-controlled regression in the overlap range—WNBA athletes consistently show larger body-size measures than WTA Top 100 athletes. BMI in particular cannot distinguish lean mass from fat mass, and basketball roles/positions likely contribute to variation in weight at a given height. The bottom line is that there is no guarantee that a certain height and weight can or cannot make it to the WTA TOP 100 or WNBA. Being an elite athlete takes a lot more than just manage yout body-size, it would be helpful to see if you are on the right track. :)
