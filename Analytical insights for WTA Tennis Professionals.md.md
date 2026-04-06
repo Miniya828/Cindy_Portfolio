@@ -58,6 +58,7 @@ This project used several analytical approaches:
 Across 11,706 matches:
 
 - Winners were slightly younger than losers (26.05 vs. 26.33 years)
+  https://github.com/Miniya828/Cindy_Portfolio/edit/cindy_tennis/Analytical%20insights%20for%20WTA%20Tennis%20Professionals.md.md#:~:text=README-,age_diff,-.png
 - Winners were slightly taller than losers (174.76 cm vs. 174.16 cm)
 
 Both differences were statistically significant, but the effect sizes were small, suggesting that age and height provide only modest advantages at the match level.
