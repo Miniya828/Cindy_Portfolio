@@ -2,9 +2,6 @@
 layout: default
 title: Cindy Hu Portfolio
 ---
-
-# Cindy Hu
-
 Sports Analytics | Tennis Performance | Player Development
 
 Welcome to my portfolio. My work focuses on applying data analytics to sports performance, especially in tennis.
