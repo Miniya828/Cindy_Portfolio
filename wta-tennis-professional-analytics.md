@@ -66,7 +66,8 @@ Both differences were statistically significant, but the effect sizes were small
 
 ### 2. Ranking trajectories differed substantially among top players
 The 2024 Top 10 players showed very different development patterns:
-<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/ef9ff681-8c91-46f6-b11a-8d5ff7345705" />
+<img width="468" height="267" alt="image" src="https://github.com/user-attachments/assets/9f8f26ca-7670-41a1-937f-9a0619398f15" />
+
 
 - Iga Swiatek and Aryna Sabalenka remained consistently elite
 - Coco Gauff, Elena Rybakina, and Qinwen Zheng showed strong upward trajectories
