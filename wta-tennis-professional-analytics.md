@@ -1,91 +1,58 @@
-# WTA Tennis Professional Analytics (2020–2024)
+# WTA Tennis Professional Analytics 2020-2024
 
-## Overview
-This project analyzes Women's Tennis Association (WTA) match data from 2020 to 2024 to understand what separates winners from losers, what patterns characterize ranking improvement, and how match-level performance can inform player development decisions.
+## Introduction
 
-The project combines descriptive analytics, player trajectory analysis, case-study exploration, and regression modeling to examine both the competitive landscape of professional women's tennis and the development path of improving players.
-
-## Objectives
-This analysis was designed around three main goals:
-
-- Identify population-level differences between match winners and losers
-- Examine how top players, especially Qinwen Zheng, improved over time
-- Explore whether serve-related performance metrics are associated with ranking improvement
+This project analyzes Women’s Tennis Association (WTA) match data spanning five seasons (2020–2024) with the goal of deriving actionable insights both for understanding the broader competitive landscape and for informing player development decisions. The central analytical objective is twofold: (1) characterize what distinguishes winners from losers at a population level, and (2) identify patterns that define improving players with a particular focus on Qinwen Zheng as a case study in rapid ranking ascent. A secondary applied objective frames part of the analysis from a coaching perspective: understanding how many tournaments elite players compete in per year, how titles are distributed, and whether specific serve metrics are statistically associated with rank improvement over time.
 
 ## Dataset
-The data come from Jeff Sackmann's public WTA match datasets and include:
 
-- **11,966 matches** across **533 tournaments**
-- **626 players**
-- Seasons: **2020–2024**
-- Surfaces: **hard, clay, and grass**
-- Variables including player identity, rankings, tournament context, and match statistics
-
-After removing rows with missing values in key variables, the working dataset included **11,706 matches**.
+All data is available on GitHub and was created by Jeff Sackmann. The dataset contains 11,966 matches across 533 unique tournaments, covering 626 distinct players competing on hard, clay, and grass surfaces at varying levels of competition, from Grand Slams down to International-level events. After removing records with missing values in key match fields, the working dataset consists of 11,706 matches. The data include player identities (winner and loser), contextual variables (surface, tournament, round), and detailed performance statistics such as aces, double faults, serve percentages, and break point outcomes.
 
 ## Research Questions
-This project explored the following questions:
 
-1. Do winners differ from losers in age and height?
-2. How did the 2024 Top 10 players evolve in the rankings from 2020 to 2024?
-3. What performance patterns characterize Qinwen Zheng's rapid rise?
-4. Among players who improved their rankings, how do tournament load and results vary by rank tier?
-5. How often do players at different rank tiers face higher-ranked opponents, and how often do they win?
-6. Are serve metrics statistically associated with ranking improvement?
+Coming into this dataset, I had no explicit research question in mind, and throughout the exploring process, the research questions were developed as the following:
 
-## Data Preparation
-The main cleaning steps included:
+- Do winners differ from losers in physical characteristics such as age and height, and if so, how large are these effects?
+- How have the top 10 players of 2024 evolved in rankings over the full 2020–2024 period?
+- What patterns in tournament performance characterize Qinwen Zheng's rapid ranking improvement?
+- Among players who improved their ranking in the past 5 years, how do tournament load and results vary by rank tier?
+- How does the proportion of matches against higher-ranked versus lower-ranked opponents vary by rank tier, and what are the win rates in each scenario?
+- Are serve metrics (first serve percentage, first serve win percentage) statistically associated with rank improvement across all players?
 
-- Removing observations with missing values in critical variables such as surface, tournament level, round, player names, and rankings
-- Converting numeric columns such as rank, ranking points, age, height, and draw size to numeric format
-- Converting tournament dates from `YYYYMMDD` format into datetime objects
-- Mapping round labels (for example, `R128` to `F`) into ordinal order for tournament progression analysis
+## Data Cleaning
 
-## Methods
-This project used several analytical approaches:
+Data preparation proceeded in two stages. First, rows missing any of the minimum required fields — surface, tournament level, round, winner name, loser name, winner rank, and loser rank — were removed, reducing the dataset from 11,966 to 11,706 matches. Second, numeric columns (rank, ranking points, age, height, draw size) were coerced to float with errors treated as missing rather than raising exceptions. Tournament date strings stored as integers in `YYYYMMDD` format were converted to datetime objects for time-series analysis. A round-order mapping was applied to convert categorical round labels (`R128` through `F`) into ordinal values for identifying each player's furthest result per tournament.
 
-- **Descriptive statistics** to compare winners and losers
-- **Paired t-tests** for age and height comparisons
-- **Ranking trajectory analysis** using monthly median rankings from 2020 to 2024
-- **Player classification** based on ranking trend over time
-- **Tournament-load summaries** by rank tier
-- **Case study analysis** of Qinwen Zheng's results and serve metrics
-- **OLS regression** to test whether serve metrics predict rank change between tournaments
+## Findings
 
-## Key Findings
+### Age
 
-### 1. Winners were slightly younger and taller
-Across 11,706 matches:
+Across all 11,706 matches, winners were slightly younger than losers (mean age: 26.05 vs. 26.33 years). A paired t-test indicated that this difference was statistically significant (`t = -5.11`, `p < 0.0001`), suggesting that younger players had a marginal advantage. However, the magnitude of the difference was small (~0.28 years), and the distribution of age differences is approximately centered near zero with substantial spread.
 
-- Winners were slightly younger than losers (26.05 vs. 26.33 years)
- <img width="294" height="230" alt="image" src="https://github.com/user-attachments/assets/fa34636b-1541-488d-9f86-539926af38db" />
+ <img width="294" height="230" alt="image" src="https://github.com/user-attachments/assets/a6fcc5aa-a6cd-4e18-8579-2e1912c8c480" />
 
-- Winners were slightly taller than losers (174.76 cm vs. 174.16 cm)
+### Height
 
-Both differences were statistically significant, but the effect sizes were small, suggesting that age and height provide only modest advantages at the match level.
+Winners were also slightly taller than losers (mean height: 174.76 cm vs. 174.16 cm). This difference was statistically significant (`t = 6.49`, `p < 0.0001`), indicating that taller players had a marginal advantage. However, the magnitude of the difference was very small (~0.6 cm). The finding suggests a marginal structural advantage for taller players, possibly linked to serve effectiveness, but height does not determine competitive outcomes at the match level.
 
-### 2. Ranking trajectories differed substantially among top players
-The 2024 Top 10 players showed very different development patterns:
-<img width="468" height="267" alt="image" src="https://github.com/user-attachments/assets/9f8f26ca-7670-41a1-937f-9a0619398f15" />
+### Top 10 Players
 
+<img width="468" height="267" alt="image" src="https://github.com/user-attachments/assets/9600334c-5cb9-46ab-9f82-45b996cad541" />
 
-- Iga Swiatek and Aryna Sabalenka remained consistently elite
-- Coco Gauff, Elena Rybakina, and Qinwen Zheng showed strong upward trajectories
+The 2024 top 10 were identified by selecting the 10 players with the lowest best observed rank during the 2024 season. Plotting monthly median rankings from 2020 to 2024 reveals varied trajectories. Swiatek and Sabalenka maintained consistently elite rankings throughout the period, while players like Gauff, Rybakina, and Zheng showed clear upward trends.
 
-This highlighted that top-level status can emerge through different developmental paths.
+Among all players in the dataset, the top 10 by total titles are led by Iga Swiatek (22 titles from 25 finals appearances), followed by Aryna Sabalenka (12 titles from 22 finals). However, not all top 10 ranked players had the most number of finals and titles. Barbora Krejcikova, Daria Kasatkina, and Anett Kontaveit earned top-10 places in finals and titles, while they did not make the top 10 by 2024, indicating that the number of championships and finals reached does not fully determine a player's ranking.
 
-### 3. Titles and finals do not fully explain rankings
-Although players such as Swiatek and Sabalenka led in titles and finals appearances, not every player with many finals or titles finished in the 2024 Top 10. This suggests ranking outcomes reflect broader consistency across the season, not only peak tournament results.
+## Professional Analysis
 
-### 4. Tournament load varies meaningfully by rank tier
-Among players with improving rankings:
+From the perspective of a professional player’s coach, if I were to start planning with a professional player, there are several questions I would need to know:
 
-- **Top 10** players averaged about **18 tournaments per year**, **4 finals**, and **2.5 titles**
-- **Rank 10–30** players played the most events, averaging **19 tournaments per year**
-- **Rank 30–100** players averaged about **17 tournaments per year**
-- **Rank 100–200** players had much lower WTA-level exposure, averaging about **6 tournaments per year**
+1. How many matches does she need to play in a year?
+2. What percentage of her matches should be against higher-ranked opponents, and what percentage against lower-ranked ones?
 
-This suggests tournament planning depends heavily on a player's current competitive tier.
+The reasoning behind this question is that players need to gain confidence from victories. Of course, competing in bigger tournaments offers greater opportunities to improve rankings, and challenging higher-ranked players provides valuable learning experiences. However, a player’s confidence is often more closely tied to the results of their performance. We need to ensure the player secures enough wins while also having sufficient opportunities to take on more challenging matches.
+
+In this analysis, we only look at players with improved ranking over the study period, in order to learn from their tournament decisions and performance patterns. Players were classified as improving if their yearly median WTA ranking showed a negative linear trend (numerically decreasing rank = improving) across at least three years of data. This criterion identified 169 improving players. The table below summarizes average tournament appearances, finals, and titles per year for improving players, grouped by rank tier. Players ranked below approximately 100 who participate primarily in ITF-level events are underrepresented in this dataset, which limits the reliability of the analysis for those tiers.
 
 | Rank Group | Avg Tournaments/Year | Median Tournaments/Year | Avg Finals/Year | Avg Titles/Year | Player-Years | Players |
 |---|---:|---:|---:|---:|---:|---:|
@@ -95,38 +62,23 @@ This suggests tournament planning depends heavily on a player's current competit
 | 100–200 | 6.33 | 6.0 | 0.11 | 0.04 | 238 | 121 |
 | >200 | 2.48 | 2.0 | — | — | — | — |
 
+Players ranked in the top 10 average approximately 18 tournaments per year with over 4 finals appearances and 2.5 titles. Those in the 10–30 range play the most tournaments, averaging 19 per year, but win fewer titles, reflecting the competitive density at that tier. Players in the 30–100 range appear at about 17 events per year and average less than one final per year. Depending on the ranking of the player that I will be working with, we can plan the number of WTA-level tournaments for the year.
 
-### 5. Matchup difficulty changes by rank tier
-The opponent profile also varied across ranking levels:
+Top 10 players face higher-ranked opponents in only about 8% of their matches, and they win roughly 74% against lower-ranked opponents. Players in the 10–30 range win 44% against higher-ranked players, and players in the 30–100 range play 51% against higher-ranked opponents and win 38%. Interestingly, players in the 100–200 tier play higher-ranked opponents 76% of the time, but they also win 38%. We can see that players outside of the top 100 do not play as many WTA-level tournaments, with fewer than 6 per year. While we do not know how much they play at the ITF level, they do not have a significantly lower win percentage, and the percentage of an upset is not dramatically lower than that of top-100 players. Therefore, when working with a player between 100–200, we need to do more thorough research on the proportion of WTA-level and ITF-level tournament planning based on current performance and many other factors.
 
-- Top 10 players faced higher-ranked opponents in only a small share of matches
-- Players ranked 10–30 and 30–100 faced stronger opponents more often
-- Players ranked 100–200 played higher-ranked opponents most of the time but still maintained competitive win rates
+## Case Study: Qinwen Zheng
 
-This has practical implications for balancing ranking opportunities, competitive challenge, and player confidence.
+<img width="468" height="204" alt="image" src="https://github.com/user-attachments/assets/75205240-395e-4ad7-88d9-3b4274074ffa" />
 
-### 6. First-serve effectiveness was associated with ranking improvement
-An OLS regression model tested whether serve performance predicted rank change between tournaments. Among six serve-related predictors, two were statistically significant:
+From the ranking trajectories we generated earlier, Qinwen Zheng illustrates a clear developmental trend. I wanted to know what she did well to improve her ranking so quickly. Pulling her results for the past 5 years, she reached 10 finals and won 5 titles out of those 10. She made the most finals in 2024, and the question arises: what explains that huge jump from 2021 to 2023? I know that serve has been a huge weapon for her, so I tried to see if her serve performance improved over time and whether that was the greatest contribution to her ranking improvement.
 
-- **First serve percentage**
-- **First serve win percentage**
+Using the two performance metrics we have in the dataset, average first serves made and first-serve points won per tournament, alongside her ranking trend revealed a notable spike in first serves made at the end of 2021 and into early 2022. However, in this period, she was still losing in early rounds. This spike likely reflects longer sets in closer-fought early-round matches. The serve trend and ranking trend converge more tightly from 2023 onward, coinciding with her first title runs.
 
-Both were negatively associated with rank change, meaning stronger first-serve performance was linked to ranking improvement.
+## Serve Metrics and Rank Improvement Regression
 
-Other variables, including second-serve win percentage, ace rate, double-fault rate, and break-point save percentage, were not statistically significant in this model.
+Only looking at Qinwen’s results does not give me the answer of whether serve performance is statistically associated with ranking changes. To find out this association among the entire study population, an OLS regression was estimated across all players with available serve data. For each player-tournament observation, serve metrics were averaged across matches within that tournament, and the outcome variable (rank change) was defined as the difference between a player's rank at the next tournament and their rank at the current tournament.
 
-## Qinwen Zheng Case Study
-Qinwen Zheng was used as a focused case study because her ranking trajectory showed one of the clearest upward trends in the dataset.
-<img width="350" height="180" alt="image" src="https://github.com/user-attachments/assets/9b72f05b-ec0f-4404-bc2f-648252f63186" />
-
-The analysis found that:
-
-- She reached **10 finals** and won **5 titles** during the study period
-- Her strongest concentration of finals came in 2024
-- Her serve metrics appeared to improve meaningfully from late 2021 into 2022
-- Her serve development aligned more closely with ranking gains from 2023 onward
-
-This suggests first-serve effectiveness may have been an important contributor to her competitive rise.
+The model included six predictors: first serve percentage (number of first serves in / total serve points), first serve win percentage (points won with first serve in / number of first serves in), second serve win percentage, ace rate, double fault rate, and break point save percentage.
 
 | Predictor | Coefficient | p-value | 95% CI Low | 95% CI High |
 |---|---:|---:|---:|---:|
@@ -138,14 +90,13 @@ This suggests first-serve effectiveness may have been an important contributor t
 | Double fault rate | -16.810 | 0.361 | -52.857 | 19.232 |
 | Break point save % | -4.719 | 0.152 | -11.177 | 1.738 |
 
-## Limitations
-This analysis has several limitations:
+Among the six predictors, first serve percentage (`β = -16.82`, `p = 0.029`) and first serve win percentage (`β = -15.41`, `p = 0.027`) were both statistically significant and negatively signed, meaning that players with a higher proportion of first serves in, and a higher proportion of first-serve points won, tend to improve their ranking between tournaments. Second serve win percentage, ace rate, double fault rate, and break point save percentage were not significant predictors. This result provides directional evidence that first-serve effectiveness is meaningfully associated with ranking trajectories, consistent with the serve development hypothesis motivating the Qinwen Zheng case study.
 
-- The dataset focuses on WTA-level events and does not fully capture ITF participation
-- The available match statistics are limited and do not include richer performance variables such as serve speed, direction, or spin
-- The OLS model treats player-tournament observations as independent and does not account for repeated measures within players
+## Limitations and Conclusion
 
-A logical next step would be to use mixed-effects models to better account for the longitudinal structure of player performance.
+Several limitations apply to the current analysis. First, the dataset only consists of WTA Tour-level tournaments and not ITF-level events. Players may be playing more ITF-level tournaments besides the WTA Tour, which we are not considering. Second, the in-match statistics are not advanced performance indicators, such as first-serve speed, direction, or spin. Furthermore, the OLS regression treats all player-tournament observations as independent, ignoring the longitudinal structure within players. A mixed model with player random effects would be a more appropriate next step.
+
+Overall, this analysis of WTA match data from 2020 to 2024 reveals several consistent patterns across different levels of the competitive landscape. At the population level, winners tend to be marginally younger and taller than their opponents, though the effect sizes are small enough that neither characteristic meaningfully predicts individual match outcomes. The rank-tier analysis of improving players highlights a structural reality of professional tennis: below rank 100, WTA-level match exposure drops sharply, and the path upward requires navigating a schedule that combines higher-ranked opponents and lower-level tournaments. The ranking trajectories for the top 10 players highlight a clear spike in Qinwen Zheng’s development, with a concentration of finals runs beginning in 2023 and culminating in a Grand Slam final and Olympic title in 2024. The serve regression adds a quantitative dimension to this story. While serve metrics alone explain only a small fraction of tournament-to-tournament rank changes, first serve percentage and first serve win percentage emerge as the two statistically significant predictors, suggesting that first-serve effectiveness is a meaningful contributor to sustained ranking improvement. Taken together, these findings offer a foundation for further player development analysis and future mixed-effects modeling of longitudinal performance.
 
 ## Tools Used
 - Python
