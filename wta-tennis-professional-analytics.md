@@ -58,13 +58,15 @@ This project used several analytical approaches:
 Across 11,706 matches:
 
 - Winners were slightly younger than losers (26.05 vs. 26.33 years)
-Images/age_diff.png
+ <img width="294" height="230" alt="image" src="https://github.com/user-attachments/assets/fa34636b-1541-488d-9f86-539926af38db" />
+
 - Winners were slightly taller than losers (174.76 cm vs. 174.16 cm)
 
 Both differences were statistically significant, but the effect sizes were small, suggesting that age and height provide only modest advantages at the match level.
 
 ### 2. Ranking trajectories differed substantially among top players
 The 2024 Top 10 players showed very different development patterns:
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/ef9ff681-8c91-46f6-b11a-8d5ff7345705" />
 
 - Iga Swiatek and Aryna Sabalenka remained consistently elite
 - Coco Gauff, Elena Rybakina, and Qinwen Zheng showed strong upward trajectories
@@ -83,6 +85,15 @@ Among players with improving rankings:
 - **Rank 100–200** players had much lower WTA-level exposure, averaging about **6 tournaments per year**
 
 This suggests tournament planning depends heavily on a player's current competitive tier.
+
+| Rank Group | Avg Tournaments/Year | Median Tournaments/Year | Avg Finals/Year | Avg Titles/Year | Player-Years | Players |
+|---|---:|---:|---:|---:|---:|---:|
+| Top 10 | 17.76 | 18.0 | 4.04 | 2.48 | 25 | 11 |
+| 10–30 | 19.02 | 20.0 | 1.71 | 0.83 | 48 | 28 |
+| 30–100 | 16.97 | 18.0 | 0.64 | 0.32 | 228 | 94 |
+| 100–200 | 6.33 | 6.0 | 0.11 | 0.04 | 238 | 121 |
+| >200 | 2.48 | 2.0 | — | — | — | — |
+
 
 ### 5. Matchup difficulty changes by rank tier
 The opponent profile also varied across ranking levels:
@@ -105,6 +116,7 @@ Other variables, including second-serve win percentage, ace rate, double-fault r
 
 ## Qinwen Zheng Case Study
 Qinwen Zheng was used as a focused case study because her ranking trajectory showed one of the clearest upward trends in the dataset.
+<img width="350" height="180" alt="image" src="https://github.com/user-attachments/assets/9b72f05b-ec0f-4404-bc2f-648252f63186" />
 
 The analysis found that:
 
@@ -114,6 +126,16 @@ The analysis found that:
 - Her serve development aligned more closely with ranking gains from 2023 onward
 
 This suggests first-serve effectiveness may have been an important contributor to her competitive rise.
+
+| Predictor | Coefficient | p-value | 95% CI Low | 95% CI High |
+|---|---:|---:|---:|---:|
+| Intercept | 23.639 | 0.001* | 9.543 | 37.735 |
+| First serve % | -16.822 | 0.029* | -31.929 | -1.716 |
+| First serve win % | -15.408 | 0.027* | -29.070 | -1.746 |
+| Second serve win % | -4.724 | 0.431 | -16.480 | 7.031 |
+| Ace rate | -2.498 | 0.899 | -40.997 | 36.001 |
+| Double fault rate | -16.810 | 0.361 | -52.857 | 19.232 |
+| Break point save % | -4.719 | 0.152 | -11.177 | 1.738 |
 
 ## Limitations
 This analysis has several limitations:
