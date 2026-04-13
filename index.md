@@ -22,9 +22,11 @@ A cross-sport comparison project analyzing athlete profile differences between e
 
 ### Las Vegas Aces Player Load Dashboard
 This project is an interactive sports analytics dashboard built to monitor player workload using Kinexon tracking data. This dashboard translates raw tracking data into a more practical decision-support tool for athlete monitoring, training management, and sports performance analysis.
+
 [Read project](https://huggingface.co/spaces/XinyueCindy/Las-Vegas-Aces-Players-Load-Kinexon)
 
 ### Tennis Dashboard
 
 An interactive tennis analytics project focused on visualizing player performance, comparing patterns across matches, and translating tennis data into practical insights for analysis and development.
+
 [Read project](https://huggingface.co/spaces/XinyueCindy/tennis_dashboard)
