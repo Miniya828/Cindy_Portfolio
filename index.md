@@ -21,7 +21,6 @@ A cross-sport comparison project analyzing athlete profile differences between e
 [Read project](./wta-top-100-vs-wnba-body-profile.md)
 
 ### Las Vegas Aces Player Load Dashboard
-
-An interactive Streamlit dashboard built with Kinexon tracking data to monitor player workload, visualize load trends, and support individual and team-level performance analysis. The app includes load summaries, acute and chronic load views, and team reporting tools.
-
-[Open dashboard](https://huggingface.co/spaces/XinyueCindy/Las-Vegas-Aces-Players-Load-Kinexon)
+This project is an interactive sports analytics dashboard built to monitor player workload using Kinexon tracking data. This dashboard translates raw tracking data into a more practical decision-support tool for athlete monitoring, training management, and sports performance analysis.
+_Live App_
+[Open the live dashboard](https://huggingface.co/spaces/XinyueCindy/Las-Vegas-Aces-Players-Load-Kinexon)
