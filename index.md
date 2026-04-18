@@ -30,4 +30,5 @@ An interactive tennis analytics project focused on visualizing player performanc
 [Live Website](https://huggingface.co/spaces/XinyueCindy/tennis_dashboard)
 
 ### Graphic Design Posters
+2024 team poster.png
 
