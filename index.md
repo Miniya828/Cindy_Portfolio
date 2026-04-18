@@ -32,3 +32,4 @@ An interactive tennis analytics project focused on visualizing player performanc
 ### Graphic Design Posters
 [2024 team poster.png](https://github.com/Miniya828/Graphic-Design/blob/main/2024%20team%20poster.png)
 
+https://github.com/Miniya828/Graphic-Design/blob/main/seniors.png
