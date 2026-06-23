@@ -29,6 +29,9 @@ This project is an interactive sports analytics dashboard built to monitor playe
 An interactive tennis analytics project focused on visualizing player performance, comparing patterns across matches, and translating tennis data into practical insights for analysis and development.
 [Live Website](https://huggingface.co/spaces/XinyueCindy/tennis_dashboard)
 
+### Speech Emotion Detection
+[Live Website](https://huggingface.co/spaces/XinyueCindy/speech-emotion-detection)
+
 ### Graphic Design Posters
 [2024 team poster.png](https://github.com/Miniya828/Graphic-Design/blob/main/2024%20team%20poster.png)
 
